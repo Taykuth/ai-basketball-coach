@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+
+# outputs
+runs/
+outputs/
+
+# model weights: download pose models from Ultralytics, keep the ball model locally
+*.pt
+
+# input videos and frames are not redistributed
+videos/
+*.mp4
+frame.jpg
