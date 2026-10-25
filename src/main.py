@@ -95,7 +95,7 @@ class Models:
     def __init__(self, pose_path: str, ball_path: str, device: Optional[str] = None,
                  conf_pose: float = 0.5, conf_ball: float = 0.65) -> None:
         self.pose = YOLO(pose_path)
-        self.ball = YOLO(r"C:\Users\osman\ai-basketball-coach\models\basketballModel.pt")
+        self.ball = YOLO(ball_path)
         self.device = device
         self.conf_pose = conf_pose
         self.conf_ball = conf_ball

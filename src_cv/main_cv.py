@@ -1,3 +1,4 @@
+import ast
 import cv2
 import time
 import argparse
@@ -22,8 +23,8 @@ def main():
     if not cap.isOpened():
         raise RuntimeError(f"Kaynak açılamadı: {source}")
 
-    lower = eval(args.hsv_lower)
-    upper = eval(args.hsv_upper)
+    lower = ast.literal_eval(args.hsv_lower)
+    upper = ast.literal_eval(args.hsv_upper)
 
     pipeline = BallCVPipeline(
         hsv_range=HSVRange(lower=lower, upper=upper),
